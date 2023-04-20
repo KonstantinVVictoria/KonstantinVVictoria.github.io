@@ -25,15 +25,21 @@ StateTemplate.init = function () {
 };
 
 let State = StateTemplate.init();
-function hoverBorderNavItem(id, transparency) {
-  const element = document.getElementById(id);
-  const navbar = document.getElementById("navbar_container");
-  element.style.borderBottom = `2px solid rgba(249, 194, 60, ${transparency})`;
+function hoverColor(element_id, color) {
+  if (element_id === "") return;
+  let element = document.getElementById(element_id);
+  element.style.backgroundColor = color;
 }
 function linkTo(link) {
   window.location.href = link;
 }
-function hoverTranslucent(element_id, amount) {
-  let element = document.getElementById(element_id);
-  element.style.backgroundColor = `rgba(255, 255, 255, ${amount})`;
+function saveToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function (x) {
+    alert("Copied!");
+  });
+}
+function hoverBorderNavItem(id, transparency) {
+  const element = document.getElementById(id);
+  const navbar = document.getElementById("navbar_container");
+  element.style.borderBottom = `2px solid rgba(249, 194, 60, ${transparency})`;
 }
