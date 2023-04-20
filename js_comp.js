@@ -25,6 +25,10 @@ StateTemplate.init = function () {
 };
 
 let State = StateTemplate.init();
+function hoverTranslucent(element_id, amount) {
+  let element = document.getElementById(element_id);
+  element.style.backgroundColor = `rgba(255, 255, 255, ${amount})`;
+}
 function linkTo(link) {
   window.location.href = link;
 }
