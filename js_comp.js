@@ -33,13 +33,13 @@ function hoverColor(element_id, color) {
 function linkTo(link) {
   window.location.href = link;
 }
-function saveToClipboard(text) {
-  navigator.clipboard.writeText(text).then(function (x) {
-    alert("Copied!");
-  });
-}
 function hoverBorderNavItem(id, transparency) {
   const element = document.getElementById(id);
   const navbar = document.getElementById("navbar_container");
   element.style.borderBottom = `2px solid rgba(249, 194, 60, ${transparency})`;
+}
+function saveToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function (x) {
+    alert("Copied!");
+  });
 }
