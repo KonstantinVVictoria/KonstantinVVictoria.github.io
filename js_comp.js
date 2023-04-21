@@ -25,13 +25,13 @@ StateTemplate.init = function () {
 };
 
 let State = StateTemplate.init();
+function linkTo(link) {
+  window.location.href = link;
+}
 function saveToClipboard(text) {
   navigator.clipboard.writeText(text).then(function (x) {
     alert("Copied!");
   });
-}
-function linkTo(link) {
-  window.location.href = link;
 }
 function hoverColor(element_id, color) {
   if (element_id === "") return;
